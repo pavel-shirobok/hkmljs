@@ -15,8 +15,7 @@ gulp.task('build', function() {
                 }
             }
         )
-    ).
-                pipe(gulp.dest('build/'));
+    ).pipe(gulp.dest('build/'));
 });
 
 gulp.task('build-min', function() {
