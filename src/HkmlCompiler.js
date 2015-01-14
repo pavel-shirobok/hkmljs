@@ -74,6 +74,7 @@ var HkmlCompiler = {
             }
         }
 
+        return chunks;
     },
 
     buildKeysNodes: function (tokens) {

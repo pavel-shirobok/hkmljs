@@ -15,9 +15,7 @@ gulp.task('build', function() {
                     'this': 'root'
                 },
                 mangle : false,
-                compress : {
-                    //TODO add some properties for more beauty build
-                },
+                compress : false,
                 output : {
                     beautify : true
                 }
@@ -36,4 +34,8 @@ gulp.task('build-min', function() {
             )
         ).
         pipe(gulp.dest('build/'));
+});
+
+gulp.task('example-js', function(){
+    return gulp.src('build/**/*.js').pipe(gulp.dest('example/js'));
 });
