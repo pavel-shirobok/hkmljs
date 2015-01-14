@@ -3,13 +3,21 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglifyjs');
 var watch = require('gulp-watch');
 
+var version = require('./package.json').version;
+
 gulp.task('build', function() {
-    var version = require('./package.json').version;
+
     return gulp.src('src/**/*.js').
         pipe(uglify(
             'hkml-' + version +'.js',
             {
-                enclose : true,
+                enclose : {
+                    'window': 'window'
+                },
+                mangle : false,
+                compress : {
+                    //TODO add some properties for more beauty build
+                },
                 output : {
                     beautify : true
                 }
@@ -19,7 +27,6 @@ gulp.task('build', function() {
 });
 
 gulp.task('build-min', function() {
-    var version = require('./package.json').version;
     return gulp.src('src/**/*.js').
         pipe(uglify(
                 'hkml-' + version +'.min.js',
