@@ -12,7 +12,7 @@ gulp.task('build', function() {
             'hkml-' + version +'.js',
             {
                 enclose : {
-                    'window': 'window'
+                    'this': 'root'
                 },
                 mangle : false,
                 compress : {
