@@ -1,0 +1,21 @@
+.hkml-js-tester {
+    display: block;
+    max-width: 200px;
+    padding: 20px;
+    margin: 10px 10px 10px 100px;
+
+    background: rgba(255, 167, 150, 0.100);
+}
+
+.hkml-js-tester-animated {
+    animation: hkml-js-tester-animation 0.1s;
+}
+
+@keyframes hkml-js-tester-animation {
+    from{
+        transform: scale(2);
+    }
+    to {
+        transform: scale(1);
+    }
+}

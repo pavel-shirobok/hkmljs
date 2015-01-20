@@ -36,6 +36,7 @@ HkmlKeyboardController.prototype.on = function(markup, callback){
         throw new Error("Handler for '" + markup + "' already exist");
     }
     this._virtualMachines[markup] = { vm : HkmlCompiler.compile(markup), callback : callback };
+    return this;
 };
 
 HkmlKeyboardController.prototype.remove = function(markup) {

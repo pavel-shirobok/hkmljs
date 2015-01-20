@@ -174,6 +174,7 @@
             vm: HkmlCompiler.compile(markup),
             callback: callback
         };
+        return this;
     };
     HkmlKeyboardController.prototype.remove = function(markup) {
         if (!this._virtualMachines[markup]) {
