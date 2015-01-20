@@ -1,6 +1,8 @@
 # HKML.JS
 **H**ot **K**ey **M**arkup **L**anguage.
 
+[Demo](http://labs.ramshteks.com/demo/hkmljs/)
+
 This library will help u make a quick map for hot keys. Just like 1-2-3-Fibonacci.
 
 Hkml.js is firstly language. So need to understand how it work.
